@@ -1,5 +1,5 @@
 JIRA Ticket #001
-System implement sorting by phone number in ascending and descending order.
+System implement sorting by age in ascending.
 
 Acceptance Criteria:
 
