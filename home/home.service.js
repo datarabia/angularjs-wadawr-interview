@@ -2,15 +2,20 @@ class HomeService {
   constructor() {
     'ngInject';
 
-var uid = 1;
+
 
     var contacts = [{
         id: 0,
-        'name': 'Rick Smith',
-        'email': 'rick.smith@tcg.com',
-        'mobile': '703 350 2066'
+        'name': 'John Smith',
+        'email': 'john.smith@tcg.com',
+        'age': 45
+    },{
+        id: 1,
+        'name': 'Jane Doe',
+        'email': 'jane.doe@tcg.com',
+        'age': 33
     }];
-
+    var uid = contacts.length;
     var alertTxt = "";
 
     this.save = function (contact) {
