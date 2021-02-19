@@ -13,6 +13,7 @@ class HomeService {
         'email': 'jane.doe@tcg.com',
         'age': 33
     }];
+    
     var uid = contacts.length;
     var alertTxt = "";
 
