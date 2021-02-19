@@ -2,8 +2,6 @@ class HomeService {
   constructor() {
     'ngInject';
 
-
-
     var contacts = [{
         id: 0,
         'name': 'John Smith',
