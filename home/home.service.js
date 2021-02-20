@@ -19,10 +19,10 @@ class HomeService {
     }, {
       id: 2,
       'name': 'John Doe',
-      'classes': [{ 'name': 'History', 'grade': 'C' },
-      { 'name': 'Math', 'grade': 'B' },
-      { 'name': 'English', 'grade': 'B' },
-      { 'name': 'Biology', 'grade': 'A-' }]
+     'classes': [{ 'name': 'History', 'grade': 'A' },
+      { 'name': 'Math', 'grade': 'B-' },
+      { 'name': 'English', 'grade': 'B+' },
+      { 'name': 'Biology', 'grade': 'A' }]
     }];
 
     var uid = students.length;
