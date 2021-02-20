@@ -2,7 +2,7 @@ class HomeService {
   constructor() {
     "ngInject";
 
-    var students = [
+   var students = [
       {
         id: 0,
         name: "John Smith",
@@ -34,6 +34,7 @@ class HomeService {
         ]
       }
     ];
+
 
     var uid = students.length;
     var alertTxt = "";
