@@ -5,13 +5,23 @@ class HomeService {
     var contacts = [{
         id: 0,
         'name': 'John Smith',
-        'email': 'john.smith@tcg.com',
-        'age': 45
+        'classes': [{'History': 'A+'}, 
+        {'Math': 'A+'},
+        {'English': 'A+'},
+        {'Biology': 'A+'}]
     },{
         id: 1,
         'name': 'Jane Doe',
-        'email': 'jane.doe@tcg.com',
-        'age': 33
+         'classes': [{'History': 'A+'}, 
+        {'Math': 'A+'},
+        {'English': 'A+'},
+        {'Biology': 'A+'}]
+    },{id: 2,
+        'name': 'John Doe',
+         'classes': [{'History': 'A+'}, 
+        {'Math': 'A+'},
+        {'English': 'A+'},
+        {'Biology': 'A+'}]
     }];
     
     var uid = contacts.length;
