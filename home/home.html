@@ -7,7 +7,7 @@
 			<div ng-repeat="student in $ctrl.students">
 				<div class="panel panel-default">
 					<div class="panel panel-heading" style="height:50px">
-						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }}</a>
+						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }} GPA: {{student.gpa}}</a>
             <!-- <span class="glyphicon glyphicon-star"></span> -->
 						<button class="btn btn-danger pull-right" title="Delete Contact" ng-click="$ctrl.delete(student.id)""><span class="glyphicon glyphicon-remove"><span></button>&nbsp;
             

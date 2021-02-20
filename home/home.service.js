@@ -65,7 +65,42 @@ class HomeService {
     }
 
     this.list = function () {
+      var gpas =[];
+      for(var i in students){
+          students[i].gpa = this.calculateCPA(students[i].classes);
+      }
       return students;
+    }
+
+    this.calculateCPA = function(arr){
+
+      var gpa = 0.0;
+      for (var i in arr ) {
+        var grade = 0;
+        switch(arr[i].grade) {
+          case 'A':
+          grade = 4.0;
+          break;
+          case 'B':
+          grade = 3.0;
+          break;
+          case 'C':
+          grade = 2.0;
+          break;
+          case 'D':
+          grade = 1.0;
+          break;
+        }
+        
+        if(arr[i].grade.indexOf('+')>-1){
+          grade = grade +  0.25;
+        } else if(arr[i].grade.indexOf('-')>-1) {
+          grade = grade -0.25;
+        }
+        gpa = gpa + grade;
+      }
+
+      return parseFloat(gpa/arr.length);
     }
   }
 }
