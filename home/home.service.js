@@ -2,7 +2,7 @@ class HomeService {
   constructor() {
     'ngInject';
 
-    var contacts = [{
+    var students = [{
         id: 0,
         'name': 'John Smith',
         'classes': [{'name': 'History', 'grade': 'A+'}, 
@@ -24,19 +24,19 @@ class HomeService {
        {'name': 'Biology', 'grade': 'A-'}]
     }];
     
-    var uid = contacts.length;
+    var uid = students.length;
     var alertTxt = "";
 
-    this.save = function (contact) {
-        if (contact.name != null && !angular.isUndefined(contact.name)) {
-            if (contact.id == null) {
-                contact.id = uid++;
-                contacts.push(contact);
+    this.save = function (student) {
+        if (student.name != null && !angular.isUndefined(student.name)) {
+            if (student.id == null) {
+                student.id = uid++;
+                students.push(student);
                 this.alertTxt = "Saved Successfully!";
             } else {
-                for (var i in contacts) {
-                    if (contacts[i].id == contact.id) {
-                        contacts[i] = contact;
+                for (var i in student) {
+                    if (students[i].id == student.id) {
+                        students[i] = student;
                     }
                 }
                 this.alertTxt = "Updated Successfully!";
@@ -47,24 +47,24 @@ class HomeService {
     }
 
     this.get = function (id) {
-        for (var i in contacts) {
-            if (contacts[i].id == id) {
-                return contacts[i];
+        for (var i in students) {
+            if (students[i].id == id) {
+                return students[i];
             }
         }
     }
 
     this.delete = function (id) {
-        for (var i in contacts) {
-            if (contacts[i].id == id) {
-                contacts.splice(i, 1);
+        for (var i in student) {
+            if (student[i].id == id) {
+                students.splice(i, 1);
             }
         }
         this.alertTxt = "Deleted Successfully!";
     }
 
     this.list = function () {
-        return contacts;
+        return students;
     }
     }
 }
