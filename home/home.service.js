@@ -5,23 +5,23 @@ class HomeService {
     var contacts = [{
         id: 0,
         'name': 'John Smith',
-        'classes': [{'History': 'A+'}, 
-        {'Math': 'A+'},
-        {'English': 'A+'},
-        {'Biology': 'A+'}]
+        'classes': [{'name': 'History', 'grade': 'A+'}, 
+       {'name': 'Math', 'grade': 'B'},
+       {'name': 'English', 'grade': 'C-'},
+       {'name': 'Biology', 'grade': 'A'}]
     },{
         id: 1,
         'name': 'Jane Doe',
-         'classes': [{'History': 'A+'}, 
-        {'Math': 'A+'},
-        {'English': 'A+'},
-        {'Biology': 'A+'}]
+          'classes': [{'name': 'History', 'grade': 'A'}, 
+       {'name': 'Math', 'grade': 'A'},
+       {'name': 'English', 'grade': 'D-'},
+       {'name': 'Biology', 'grade': 'C'}]
     },{id: 2,
         'name': 'John Doe',
-         'classes': [{'History': 'A+'}, 
-        {'Math': 'A+'},
-        {'English': 'A+'},
-        {'Biology': 'A+'}]
+          'classes': [{'name': 'History', 'grade': 'C'}, 
+       {'name': 'Math', 'grade': 'B'},
+       {'name': 'English', 'grade': 'B'},
+       {'name': 'Biology', 'grade': 'A-'}]
     }];
     
     var uid = contacts.length;

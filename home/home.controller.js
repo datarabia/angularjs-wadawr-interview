@@ -3,14 +3,14 @@ class HomeCtrl {
     "ngInject";
     var $ctrl=this;
     $ctrl.name='Students';
-    $ctrl.contacts = HomeService.list();
+    $ctrl.students = HomeService.list();
     $ctrl.showModal = false;
     $ctrl.contact = {};
 
     $ctrl.addRecord = function() {
       $ctrl.contact = {};
       $ctrl.showModal = true;
-      $ctrl.modalTitle = 'Add Contact';
+      $ctrl.modalTitle = 'Add Student';
     };
 
     $ctrl.saveContact = function() {
@@ -28,6 +28,7 @@ class HomeCtrl {
     $ctrl.edit = function(id) {
       $ctrl.contact = angular.copy(HomeService.get(id));
       $ctrl.showModal = true;
+      $ctrl.modalTitle = 'Edit Student';
     };
     $ctrl.closeModal = function(id) {
       $ctrl.showModal = false;

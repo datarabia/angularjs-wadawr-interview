@@ -1,10 +1,8 @@
-JIRA Ticket #001
-System implement sorting by age in ascending.
+JIRA Ticket #002
+Implement 
 
 Acceptance Criteria:
 
-1. When the user navigates to the main screen the contacts grid
-will contain a sortable age column.
-2. Data in the grid will be sorted by age in ascending order by default.
-3. Users will be able to reverse the sort direction of the data by clicking
-on a toggle in the age grid header.
+1. When the user navigates to the main screen, the students table 
+will display the student's GPA in the record header
+2. The system will display a star by the name of the student(s) with the highest GPA in the group. 

@@ -1,65 +1,68 @@
 <div class="container-fluid" style="padding-top:15px">
-<div class="panel panel-default">
-  <div class="panel panel-heading" style="height:50px">{{$ctrl.name}}
-   <button class="btn btn-success pull-right" ng-click="$ctrl.addRecord()" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></button></div>
-  <div class="panel-body">
-     <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Age</th>
-                <th>&nbsp;</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="contact in $ctrl.contacts">
-                <td><a href="" ng-click="$ctrl.edit(contact.id)" title="Edit">{{ contact.name }}</a></td>
-                <td>{{ contact.email }}</td>
-                <td>{{ contact.age }}</td>
-                <td>
-                  <div style="pull-right">
-                   <button class="btn btn-danger pull-right" title="Delete Contact" ng-click="$ctrl.delete(contact.id)"><span class="glyphicon glyphicon-remove"><span></button> 
-                 </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-  </div>
-  </div>
+	<div class="panel panel-default">
+		<div class="panel panel-heading" style="height:50px">{{$ctrl.name}}
+			<button class="btn btn-success pull-right" ng-click="$ctrl.addRecord()" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></button>
+		</div>
+		<div class="panel-body">
+			<div ng-repeat="student in $ctrl.students">
+				<div class="panel panel-default">
+					<div class="panel panel-heading" style="height:50px">
+						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }}</a>
+
+						<button class="btn btn-danger pull-right" title="Delete Contact" ng-click="$ctrl.delete(student.id)""><span class="glyphicon glyphicon-remove"><span></button>
+
+					</div>
+					<div class="panel-body">
+						<table class="table">
+							<tr ng-repeat="class in student.classes">
+								<td width="90%">{{class.name}}</td>
+								<td>{{class.grade}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-    <div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="$ctrl.showModal"> 
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">{{$ctrl.modalTitle}}</h5>
-        <button type="button" class="close" ng-click="$ctrl.closeModal()" aria-label="Close">
+<div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="$ctrl.showModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">{{$ctrl.modalTitle}}</h5>
+				<button type="button" class="close" ng-click="$ctrl.closeModal()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <form>
-        <div class="form-group">
-  <label for="name">Name:</label>
-  <input type="text" class="form-control"  placeholder="Full name"  id="name"  name="name" ng-model="$ctrl.contact.name"/ >
-</div> 
- <div class="form-group">
-  <label for="phone">Age:</label>
-  <input type="number" class="form-control"  placeholder="Age"  id="age"  name="age" ng-model="$ctrl.contact.age"/ >
-</div> 
-<div class="form-group">
-  <label for="email">Email:</label>
-  <input type="text" class="form-control"  placeholder="Email address"  id="email"  name="email" ng-model="$ctrl.contact.email"/ >
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control"  placeholder="Full name"  id="name"  name="name" ng-model="$ctrl.contact.name"/ >
 </div>
-  <input type="hidden" ng-model="ctrl.contact.id" />
+						<div class="form-group">
+							<label for="history">History:</label>
+							<input type="text" class="form-control"  placeholder="Grade"  id="history"  name="history" ng-model="$ctrl.contact.classes[0].grade"/ >
+</div>
+							<div class="form-group">
+								<label for="math">Math:</label>
+								<input type="text" class="form-control"  placeholder="Grade"  id="math"  name="math" ng-model="$ctrl.contact.classes[1].grade"/ >
+</div>
+								<div class="form-group">
+									<label for="english">English:</label>
+									<input type="text" class="form-control"  placeholder="Grade"  id="english"  name="english" ng-model="$ctrl.contact.classes[2].grade"/ >
+									<div class="form-group">
+										<label for="biology">Biology:</label>
+										<input type="text" class="form-control"  placeholder="Grade"  id="biology"  name="biology" ng-model="$ctrl.contact.classes[3].grade"/ >
+</div>
+										<input type="hidden" ng-model="ctrl.contact.id" />
   </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary pull-right" ng-click="$ctrl.closeModal()">Close</button>
-        <button type="button" ss="btn btn-success pull-right" value="Save" ng-click="$ctrl.saveContact()" class="btn btn-primary pull-right">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
- </div>
- <!-- <span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span> --> 
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary pull-right" ng-click="$ctrl.closeModal()">Close</button>
+										<button type="button" ss="btn btn-success pull-right" value="Save" ng-click="$ctrl.saveContact()" class="btn btn-primary pull-right">Save</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span> -->
