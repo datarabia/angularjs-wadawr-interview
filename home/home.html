@@ -4,13 +4,12 @@
 			<button class="btn btn-success pull-right" ng-click="$ctrl.addRecord()" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></button>
 		</div>
 		<div class="panel-body">
-			<div ng-repeat="student in $ctrl.students">
+			<div ng-repeat="student in $ctrl.results.students">
 				<div class="panel panel-default">
 					<div class="panel panel-heading" style="height:50px">
-						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }} GPA: {{student.gpa}}</a>
-            <!-- <span class="glyphicon glyphicon-star"></span> -->
+						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }}</a> GPA: {{student.gpa}} 
+            <span ng-hide="student.gpa < $ctrl.results.topGPA" class="glyphicon glyphicon-star"></span>
 						<button class="btn btn-danger pull-right" title="Delete Contact" ng-click="$ctrl.delete(student.id)""><span class="glyphicon glyphicon-remove"><span></button>&nbsp;
-            
 					</div>
 					<div class="panel-body">
 						<table class="table">
@@ -19,7 +18,6 @@
 								<td>{{class.grade}}</td>
 							</tr>
 						</table>
-            <!--  <span class="pull-right">GPA:    </span> -->
 					</div>
 				</div>
 			</div>

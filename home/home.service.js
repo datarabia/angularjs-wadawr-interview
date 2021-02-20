@@ -27,6 +27,7 @@ class HomeService {
 
     var uid = students.length;
     var alertTxt = "";
+    var topGPA = 0;
 
     this.save = function (student) {
       if (student.name != null && !angular.isUndefined(student.name)) {
@@ -65,11 +66,13 @@ class HomeService {
     }
 
     this.list = function () {
-      var gpas =[];
+      var results ={};
       for(var i in students){
           students[i].gpa = this.calculateCPA(students[i].classes);
       }
-      return students;
+      results.students = students;
+      results.topGPA=topGPA;
+      return results;
     }
 
     this.calculateCPA = function(arr){
@@ -92,15 +95,18 @@ class HomeService {
           break;
         }
         
-        if(arr[i].grade.indexOf('+')>-1){
-          grade = grade +  0.25;
-        } else if(arr[i].grade.indexOf('-')>-1) {
-          grade = grade -0.25;
+        if(arr[i].grade.indexOf('+') > -1){
+          grade = grade + 0.25;
+        } else if(arr[i].grade.indexOf('-') > -1) {
+          grade = grade - 0.25;
         }
         gpa = gpa + grade;
       }
-
-      return parseFloat(gpa/arr.length);
+      var finalGPA = parseFloat(gpa/arr.length);
+      if (finalGPA > topGPA) {
+        topGPA = finalGPA;
+      }
+      return finalGPA
     }
   }
 }

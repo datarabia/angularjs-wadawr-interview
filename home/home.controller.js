@@ -3,7 +3,7 @@ class HomeCtrl {
     "ngInject";
     var $ctrl=this;
     $ctrl.name='Students';
-    $ctrl.students = HomeService.list();
+    $ctrl.results = HomeService.list();
     $ctrl.showModal = false;
     $ctrl.contact = {};
 
@@ -33,7 +33,9 @@ class HomeCtrl {
     $ctrl.closeModal = function(id) {
       $ctrl.showModal = false;
     };
-
+    $ctrl.getTopGPA = function() {
+      return HomeService.getHighestGPA($ctrl.students);
+    };
   }
 }
 
