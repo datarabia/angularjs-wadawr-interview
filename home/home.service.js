@@ -47,7 +47,7 @@ class HomeService {
           students.push(student);
           this.alertTxt = "Saved Successfully!";
         } else {
-          for (var i in student) {
+          for (var i in students) {
             if (students[i].id == student.id) {
               students[i] = student;
             }

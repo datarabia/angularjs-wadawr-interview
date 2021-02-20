@@ -36,29 +36,29 @@
 				<form>
 					<div class="form-group">
 						<label for="name">Name:</label>
-						<input type="text" class="form-control"  placeholder="Full name"  id="name"  name="name" ng-model="$ctrl.contact.name"/ >
+						<input type="text" class="form-control"  placeholder="Full name"  id="name"  name="name" ng-model="$ctrl.student.name"/ >
 </div>
 						<div class="form-group">
 							<label for="history">History:</label>
-							<input type="text" class="form-control"  placeholder="Grade"  id="history"  name="history" ng-model="$ctrl.contact.classes[0].grade"/ >
+							<input type="text" class="form-control"  placeholder="Grade"  id="history"  name="history" ng-model="$ctrl.student.classes[0].grade"/ >
 </div>
 							<div class="form-group">
 								<label for="math">Math:</label>
-								<input type="text" class="form-control"  placeholder="Grade"  id="math"  name="math" ng-model="$ctrl.contact.classes[1].grade"/ >
+								<input type="text" class="form-control"  placeholder="Grade"  id="math"  name="math" ng-model="$ctrl.student.classes[1].grade"/ >
 </div>
 								<div class="form-group">
 									<label for="english">English:</label>
-									<input type="text" class="form-control"  placeholder="Grade"  id="english"  name="english" ng-model="$ctrl.contact.classes[2].grade"/ >
+									<input type="text" class="form-control"  placeholder="Grade"  id="english"  name="english" ng-model="$ctrl.student.classes[2].grade"/ >
 									<div class="form-group">
 										<label for="biology">Biology:</label>
-										<input type="text" class="form-control"  placeholder="Grade"  id="biology"  name="biology" ng-model="$ctrl.contact.classes[3].grade"/ >
+										<input type="text" class="form-control"  placeholder="Grade"  id="biology"  name="biology" ng-model="$ctrl.student.classes[3].grade"/ >
 </div>
-										<input type="hidden" ng-model="ctrl.contact.id" />
+										<input type="hidden" ng-model="ctrl.student.id" />
   </form>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary pull-right" ng-click="$ctrl.closeModal()">Close</button>
-										<button type="button" ss="btn btn-success pull-right" value="Save" ng-click="$ctrl.saveContact()" class="btn btn-primary pull-right">Save</button>
+										<button type="button" ss="btn btn-success pull-right" value="Save" ng-click="$ctrl.saveRecord()" class="btn btn-primary pull-right">Save</button>
 									</div>
 								</div>
 							</div>
