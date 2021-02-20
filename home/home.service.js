@@ -65,7 +65,9 @@ class HomeService {
     }
 
     this.list = function () {
-      return students;
+      var results ={};
+      results.students=students;
+      return results;
     }
   }
 }

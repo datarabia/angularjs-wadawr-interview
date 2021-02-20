@@ -3,7 +3,7 @@ class HomeCtrl {
     "ngInject";
     var $ctrl=this;
     $ctrl.name='Students';
-    $ctrl.students = HomeService.list();
+    $ctrl.results = HomeService.list();
     $ctrl.showModal = false;
     $ctrl.contact = {};
 
