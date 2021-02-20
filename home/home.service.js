@@ -112,7 +112,7 @@ class HomeService {
         }
         gpa += grade;
       }
-      var finalGPA = parseFloat(gpa / arr.length);
+      var finalGPA = gpa / arr.length;
       if (finalGPA > topGPA) {
         topGPA = finalGPA;
       }
