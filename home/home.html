@@ -1,7 +1,7 @@
 <div class="container-fluid" style="padding-top:15px">
 	<div class="panel panel-default">
 		<div class="panel panel-heading" style="height:50px">{{$ctrl.name}}
-			<button class="btn btn-success pull-right" ng-click="$ctrl.addRecord()" title="Add Contact"><span class="glyphicon glyphicon-plus"></span></button>
+			<button class="btn btn-success pull-right" ng-click="$ctrl.addRecord()" title="Add Student"><span class="glyphicon glyphicon-plus"></span></button>
 		</div>
 		<div class="panel-body">
 			<div ng-repeat="student in $ctrl.results.students">
@@ -10,7 +10,7 @@
 						<a href="" ng-click="$ctrl.edit(student.id)">{{ student.name }}</a>
 						<!--<span class="glyphicon glyphicon-star"></span>
            <span class="pull-right"> GPA: </span> -->
-						<button class="btn btn-danger pull-right" title="Delete Contact" ng-click="$ctrl.delete(student.id)""><span class="glyphicon glyphicon-remove"><span></button>
+						<button class="btn btn-danger pull-right" title="Delete Student" ng-click="$ctrl.delete(student.id)""><span class="glyphicon glyphicon-remove"><span></button>
 					</div>
 					<div class="panel-body">
 						<table class="table">
