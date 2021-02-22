@@ -11,14 +11,14 @@ class HomeService {
       { 'name': 'Biology', 'grade': 'A' }]
     }, {
       id: 1,
-      'name': 'Jane Doe',
+      'name': 'John Doe',
       'classes': [{ 'name': 'History', 'grade': 'A' },
       { 'name': 'Math', 'grade': 'A' },
       { 'name': 'English', 'grade': 'D-' },
       { 'name': 'Biology', 'grade': 'C' }]
     }, {
       id: 2,
-      'name': 'John Doe',
+      'name': 'Jane Doe',
      'classes': [{ 'name': 'History', 'grade': 'A' },
       { 'name': 'Math', 'grade': 'B-' },
       { 'name': 'English', 'grade': 'B+' },
