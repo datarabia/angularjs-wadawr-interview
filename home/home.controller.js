@@ -8,25 +8,25 @@ class HomeCtrl {
     $ctrl.contact = {};
 
     $ctrl.addRecord = function() {
-      $ctrl.contact = {};
+      $ctrl.student = {};
       $ctrl.showModal = true;
       $ctrl.modalTitle = 'Add Student';
     };
 
     $ctrl.saveContact = function() {
-      HomeService.save($ctrl.contact);
+      HomeService.save($ctrl.student);
       alert(HomeService.alertTxt);
-      $ctrl.contact = {};
+      $ctrl.student = {};
       $ctrl.showModal = false;
     };
 
     $ctrl.delete = function(id) {
       HomeService.delete(id);
       alert(HomeService.alertTxt);
-      if ($ctrl.contact.id == id) $ctrl.contact = {};
+      if ($ctrl.student.id == id) $ctrl.student = {};
     };
     $ctrl.edit = function(id) {
-      $ctrl.contact = angular.copy(HomeService.get(id));
+      $ctrl.student = angular.copy(HomeService.get(id));
       $ctrl.showModal = true;
       $ctrl.modalTitle = 'Edit Student';
     };
