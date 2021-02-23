@@ -5,7 +5,7 @@ class HomeCtrl {
     $ctrl.name='Students';
     $ctrl.results = HomeService.list();
     $ctrl.showModal = false;
-    $ctrl.contact = {};
+    $ctrl.stud = {};
 
     $ctrl.addRecord = function() {
       $ctrl.student = {};
