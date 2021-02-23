@@ -2,28 +2,38 @@ class HomeService {
   constructor() {
     'ngInject';
 
-    var students = [{
-      id: 0,
-      'name': 'John Smith',
-      'classes': [{ 'name': 'History', 'grade': 'A+' },
-      { 'name': 'Math', 'grade': 'B' },
-      { 'name': 'English', 'grade': 'C-' },
-      { 'name': 'Biology', 'grade': 'A' }]
-    }, {
-      id: 1,
-      'name': 'John Doe',
-      'classes': [{ 'name': 'History', 'grade': 'A' },
-      { 'name': 'Math', 'grade': 'A' },
-      { 'name': 'English', 'grade': 'D-' },
-      { 'name': 'Biology', 'grade': 'C' }]
-    }, {
-      id: 2,
-      'name': 'Jane Doe',
-     'classes': [{ 'name': 'History', 'grade': 'A' },
-      { 'name': 'Math', 'grade': 'B-' },
-      { 'name': 'English', 'grade': 'B+' },
-      { 'name': 'Biology', 'grade': 'A' }]
-    }];
+     var students = [
+      {
+        id: 0,
+        name: "John Smith",
+        classes: [
+          { name: "History", grade: "A+" },
+          { name: "Math", grade: "B" },
+          { name: "English", grade: "C-" },
+          { name: "Biology", grade: "A" }
+        ]
+      },
+      {
+        id: 1,
+        name: "John Doe",
+        classes: [
+          { name: "History", grade: "A" },
+          { name: "Math", grade: "A" },
+          { name: "English", grade: "D-" },
+          { name: "Biology", grade: "C" }
+        ]
+      },
+      {
+        id: 2,
+        name: "Jane Doe",
+        classes: [
+          { name: "History", grade: "A" },
+          { name: "Math", grade: "B+" },
+          { name: "English", grade: "C" },
+          { name: "Biology", grade: "A-" }
+        ]
+      }
+    ];
 
     var uid = students.length;
     var alertTxt = "";
